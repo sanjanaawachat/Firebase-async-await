@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE MODEL-WITH FETCH USING ASYNC AWAIT</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="spinner d-none" id="spinner">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <div class="backdrop d-none" id="backdrop"></div>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between">
+            <div class="logo-img">
+                <img src="./assets/images/logo.svg" alt="logo-img">
+            </div>
+
+            <div><button id="addMovie" class="btn btn-danger">ADD MOVIE</button></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+
+        <div class="col-md-8 offset-md-2">
+
+
+            <form id="movieForm" class="d-none">
+                <div id="movieform" class="card" style="padding: 34px;">
+                    <div class="card-header d-flex justify-content-between">
+                        <h4>MOVIE FORM</h4>
+
+                        <div id="closeBtn" style="cursor: pointer;"><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="movieTitle">MOVIE TITLE*</label>
+                        <input type="text" name="title" id="title" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movieImage">MOVIE IMAGE*</label>
+                        <input type="text" alt="" id="image" class="form-control"
+                            placeholder="please send Image url............." required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="movieDescription">MOVIE DESCRIPTION*</label>
+                        <textarea name="Description" id="description" rows="" class="form-control" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movieRating">MOVIE RATING*</label>
+                        <select name="movieRating" id="rating" class="form-control" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button id="addMovieBtn" class="btn btn-primary form-control" type="submit">ADD BTN</button>
+                    <button id="updateMovieBtn" class="d-none btn btn-warning form-control" type="button">UPDATE
+                        BTN</button>
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row" id="movieContainer">
+            <!-- <div class="col-md-4 mb-4">
+                <div class="card movieCard" style="padding: 34px;">
+                    <div class="card-header d-flex justify-content-between">
+                        <h4>MOVIE CARD</h4>
+                    </div>
+                    <div class="card-body">
+                        <p><img src="" alt=""></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum mollitia itaque non
+                            consequatur, natus vitae consectetur ipsum quis! Iure eum rerum odio excepturi quam non
+                            soluta inventore laborum praesentium nam aspernatur vero rem officiis cum sed, labore sunt
+                            maiores quisquam, architecto esse! Totam, maxime perspiciatis.</p>
+
+                        <p>1.4</p>
+                    </div>
+
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">EDIT</button>
+                        <button class="btn btn-sm btn-warning">REMOVE</button>
+                    </div>
+
+
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
